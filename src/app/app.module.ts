@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BreedPickerComponent } from './breed-picker/breed-picker.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BreedPickerComponent
   ],
   imports: [
     BrowserModule,
