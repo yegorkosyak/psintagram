@@ -1,1 +1,31 @@
-<p>breed-picker works!</p>
+<div id="breed-picker">
+  <h1>Psintagram</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Breeds</mat-label>
+    <mat-select
+      [(value)]="selectedBreed"
+      (selectionChange)="setBreedImage(selectedBreed)"
+    >
+      <mat-option *ngFor="let breed of breedData" [value]="breed[0]">
+        {{ breed[0] }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="setRandomImage(selectedBreed)"
+  >
+    Wyświetlić inne zdjęcie tej samej rasy
+  </button>
+  <div class="image-wrap">
+    <img src="{{ breedImage }}" alt="" />
+  </div>
+
+  <p>Poczytaj więcej o tej rasie na Wikipedii:</p>
+  <p>
+    <a href="https://en.wikipedia.org/wiki/{{ selectedBreed }}" target="_blank">
+      {{ selectedBreed }}</a
+    >
+  </p>
+</div>

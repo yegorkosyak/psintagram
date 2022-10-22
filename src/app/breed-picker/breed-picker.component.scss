@@ -1,0 +1,28 @@
+#breed-picker {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: min-content;
+  padding: 15px;
+  background-color: #f3dbe0;
+  border: 2px solid #b56576;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 639px) {
+    height: 100%;
+  }
+}
+
+.image-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  img {
+    max-width: 400px;
+    @media (max-width: 639px) {
+      max-width: 50%;
+    }
+  }
+}

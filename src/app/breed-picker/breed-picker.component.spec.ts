@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { BreedPickerComponent } from './breed-picker.component';
 
-describe('BreedPickerComponent', () => {
+describe('BreedPickerComponent testing', () => {
   let component: BreedPickerComponent;
   let fixture: ComponentFixture<BreedPickerComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ BreedPickerComponent ]
-    })
-    .compileComponents();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    });
 
     fixture = TestBed.createComponent(BreedPickerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('works', () => {
     expect(component).toBeTruthy();
   });
 });
